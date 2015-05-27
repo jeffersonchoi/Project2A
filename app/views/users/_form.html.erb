@@ -1,0 +1,21 @@
+<%= form_for @user do |f| %>
+
+
+    <div>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+    </div>
+    <div>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+    </div>
+    <div>
+        <%= f.label :date_of_birth %>
+        <%= f.date_field :date_of_birth %>
+    </div>
+
+
+
+    <button> <%= f.submit "Add new user!" %> </button>
+
+<% end %>
