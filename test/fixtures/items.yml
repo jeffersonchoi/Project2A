@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  referece: 
+  name: MyString
+  stock_quantity: 1
+  marked_price: 1.5
+
+two:
+  referece: 
+  name: MyString
+  stock_quantity: 1
+  marked_price: 1.5

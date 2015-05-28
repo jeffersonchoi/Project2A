@@ -6,5 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-users = User.create([user_id: 1, first_name: "Jefferson", last_name: "Choi", date_of_birth: "09/12/1991"])
-users = User.create([user_id: 2, first_name: "Jonathan", last_name: "Choi", date_of_birth: "06/18/1983"])
+users = User.create([
+	{first_name: "Jefferson", last_name: "Choi", date_of_birth: "12/09/1991", email: "jeffersonchoi@text.com"}, 
+	{first_name: "Jonathan", last_name: "Choi", date_of_birth: "18/16/1983", email: "jonathan@text.com"}
+	])
+
+items = Item.create([
+	{user_id: 1, name: "apple", stock_quantity: 10, marked_price: 3.5},
+	{user_id: 2, name: "orange", stock_quantity: 20, marked_price: 2.5}
+	])
