@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  get '/login'     => 'sessions#new'
+  post '/login'    => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
@@ -37,8 +39,8 @@ Rails.application.routes.draw do
   #   resources :products
 
   get "orders/" => "orders#index"
-  # get "orders/new" => "orders#new", as: :new_item
-  get "orders/orderlines/:id" => "orders#show", as: :orderline
+  # get "orders/new" => "orders#new", as: :new_order
+  get "orders/:id" => "orders#show", as: :order
   # post "orders/" => "orders#create"
   # get "orders/:id/edit" => "orders#edit", as: :edit_item
   # patch "orders/:id" => "orders#update"

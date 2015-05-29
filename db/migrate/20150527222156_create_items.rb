@@ -3,7 +3,7 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.references :user, index: true
       t.references :orderline, index: true
-      t.string :name
+      t.string :item_name
       t.integer :stock_quantity
       t.float :marked_price
 

@@ -1,0 +1,19 @@
+<h1>New Order!</h1>
+
+<%= form_for @orderline do |f| %>
+
+
+	<div>
+        <%= f.label :quantity %>
+        <%= f.number_field :quantity %>
+    </div>
+
+    <div>
+        <%= f.label :selling_price %>
+        <%= f.number_field :selling_price %>
+    </div>
+
+
+    <button> <%= f.submit "Submit!" %> </button>
+
+<% end %>

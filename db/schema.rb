@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150528214633) do
   create_table "items", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "orderline_id"
-    t.string   "name"
+    t.string   "item_name"
     t.integer  "stock_quantity"
     t.float    "marked_price"
     t.datetime "created_at",     null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150528214633) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
+    t.string   "password_digest"
     t.date     "date_of_birth"
     t.string   "purchase_history"
     t.datetime "created_at",       null: false

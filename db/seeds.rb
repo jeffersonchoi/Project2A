@@ -8,7 +8,7 @@
 
 users = User.create([
 	{first_name: "Jefferson", last_name: "Choi", date_of_birth: "12/09/1991", email: "jeffersonchoi@text.com"}, 
-	{first_name: "Jonathan", last_name: "Choi", date_of_birth: "18/16/1983", email: "jonathan@text.com"}
+	{first_name: "Jonathan", last_name: "Choi", date_of_birth: "18/6/1983", email: "jonathan@text.com"}
 	])
 
 items = Item.create([

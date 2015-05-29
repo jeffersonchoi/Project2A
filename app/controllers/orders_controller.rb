@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-def index
+	def index
 		@orders = Order.all
 	end
 
@@ -14,19 +14,19 @@ def index
 
 	end
 
-# 	def new
-# 		@order = order.new
-# 	end
+	def new
+		@orderline = Orderline.new
+	end
 
-# 	def create
-# 		 @order = order.new(user_params)
+	# def create
+	# 	 @order = order.new(user_params)
 
-# 		if @order.save
-# 		  redirect_to orders_path
-# 		else
-# 		  render :new
-# 		end
-# 	end
+	# 	if @order.save
+	# 	  redirect_to orders_path
+	# 	else
+	# 	  render :new
+	# 	end
+	# end
 
 # 	def edit
 # 		@order = order.find(params[:id])
