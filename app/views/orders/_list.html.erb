@@ -1,0 +1,12 @@
+<table>
+	<tr> 
+		<th> ID   </th>
+
+	</tr>
+    <% @orders.each do |order| %>
+		<tr>
+			<td> <%= order.id %> </td>
+
+		</tr>
+    <% end %>
+</table>

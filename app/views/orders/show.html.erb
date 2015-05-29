@@ -1,0 +1,10 @@
+<h1> Orderline ID: <%= @orderline.id %> </h1>
+
+<p>Order Item name is 
+
+<% @orderline.items.each do |item| %>
+<%= item.name %>
+<% end %>
+
+Order Item quantity is <%= @orderline.quantity%>. Order Item price is <%= @orderline.selling_price %>. It belongs to <%= @user.first_name %> </p>
+

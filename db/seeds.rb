@@ -12,6 +12,17 @@ users = User.create([
 	])
 
 items = Item.create([
-	{user_id: 1, name: "apple", stock_quantity: 10, marked_price: 3.5},
-	{user_id: 2, name: "orange", stock_quantity: 20, marked_price: 2.5}
+	{user_id: 1, orderline_id: 1, name: "apple", stock_quantity: 10, marked_price: 3.5},
+	{user_id: 2, orderline_id: 1, name: "orange", stock_quantity: 20, marked_price: 2.5}
 	])
+
+orders = Order.create([
+	{user_id: 1},
+	{user_id: 2}
+	])
+
+orderlines = Orderline.create([
+	{order_id: 1, quantity: 2, selling_price: 2.5, total_price: 5},
+	{order_id: 2, quantity: 3, selling_price: 6, total_price: 18}
+	])
+

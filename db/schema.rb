@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20150528214633) do
 
   create_table "items", force: :cascade do |t|
     t.integer  "user_id"
+    t.integer  "orderline_id"
     t.string   "name"
     t.integer  "stock_quantity"
     t.float    "marked_price"
@@ -22,10 +23,10 @@ ActiveRecord::Schema.define(version: 20150528214633) do
     t.datetime "updated_at",     null: false
   end
 
+  add_index "items", ["orderline_id"], name: "index_items_on_orderline_id"
   add_index "items", ["user_id"], name: "index_items_on_user_id"
 
   create_table "orderlines", force: :cascade do |t|
-    t.integer  "item_id"
     t.integer  "order_id"
     t.integer  "quantity"
     t.float    "selling_price"
