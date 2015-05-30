@@ -38,9 +38,9 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  get "orders/" => "orders#index"
+  # get "orders/" => "orders#index"
   # get "orders/new" => "orders#new", as: :new_order
-  get "orders/:id" => "orders#show", as: :order
+  # get "orders/:id" => "orders#show", as: :order
   # post "orders/" => "orders#create"
   # get "orders/:id/edit" => "orders#edit", as: :edit_item
   # patch "orders/:id" => "orders#update"

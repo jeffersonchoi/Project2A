@@ -18,40 +18,40 @@ class OrdersController < ApplicationController
 		@orderline = Orderline.new
 	end
 
-	# def create
-	# 	 @order = order.new(user_params)
+	def create
+		 @order = order.new(user_params)
 
-	# 	if @order.save
-	# 	  redirect_to orders_path
-	# 	else
-	# 	  render :new
-	# 	end
-	# end
+		if @order.save
+		  redirect_to orders_path
+		else
+		  render :new
+		end
+	end
 
-# 	def edit
-# 		@order = order.find(params[:id])
-# 	end
+	def edit
+		@order = order.find(params[:id])
+	end
 
-# 	def update
-# 		@order = order.find(params[:id])
+	def update
+		@order = order.find(params[:id])
 
-# 		if @user.update_attributes(user_params)
-# 		redirect_to orders_path
-# 		else
-# 		render :edit
-# 		end
-# 	end
+		if @order.update_attributes(order_params)
+		redirect_to orders_path
+		else
+		render :edit
+		end
+	end
 
-# 	def destroy
-# 		@order = order.find(params[:id])
-# 		@order.destroy
-# 		redirect_to orders_path
-# 	end
+	def destroy
+		@order = order.find(params[:id])
+		@order.destroy
+		redirect_to orders_path
+	end
 
-# private
-# 	def order_params
-# 	  params.require(:order).permit(:first_name, :last_name, :date_of_birth)
-# 	end
+private
+	def order_params
+	  params.require(:order).permit(:user_id, :created_at)
+	end
 
 
 end

@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 users = User.create([
-	{first_name: "Jefferson", last_name: "Choi", date_of_birth: "12/09/1991", email: "jeffersonchoi@text.com"}, 
-	{first_name: "Jonathan", last_name: "Choi", date_of_birth: "18/6/1983", email: "jonathan@text.com"}
+	{first_name: "Jefferson", last_name: "Choi", date_of_birth: "12/09/1991", email: "jeffersonchoi@text.com", password: "123", password_confirmation: "123"}, 
+	{first_name: "Jonathan", last_name: "Choi", date_of_birth: "18/6/1983", email: "jonathan@text.com", password: "123", password_confirmation: "123"}
 	])
 
 items = Item.create([
-	{user_id: 1, orderline_id: 1, name: "apple", stock_quantity: 10, marked_price: 3.5},
-	{user_id: 2, orderline_id: 1, name: "orange", stock_quantity: 20, marked_price: 2.5}
+	{user_id: 1, orderline_id: 1, item_name: "apple", stock_quantity: 10, marked_price: 3.5},
+	{user_id: 2, orderline_id: 1, item_name: "orange", stock_quantity: 20, marked_price: 2.5}
 	])
 
 orders = Order.create([
